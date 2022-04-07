@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Registration form</title>
+        <link rel="stylesheet" href="login.css">
+  </head>
+  <body>
+            <h1>Registration form</h1>
+    <form id="f">
+
+     <label for="name"> Name</label><br>
+     <input type="text" name="name"  required><br>
+
+     <label for="surname">Surname </label><br>
+     <input type="text" name="surname" required><br>
+
+     <label for="mail">e-mail</label><br>
+     <input type="email" name="mail" required><br>
+
+     <label for="username">Username</label><br>
+     <input type="text" name="username" required><br>
+
+     <label for="password">Password</label><br>
+     <input type="text" name="password" required><br>
+
+     <input type="submit" value="Submit">
+   </form>
+
+   <script>
+        
+    f=document.getElementById("f");
+    
+    f.addEventListener( "submit", function(event) {
+    event.preventDefault();
+    form=new FormData(document.getElementById("f"));
+    obj=new Object();
+    
+    for(entry of form.entries())
+        obj[entry[0]]=entry[1];
+    
+     str=JSON.stringify(obj);
+     window.alert(str);
+} );
+
+</script>
+
+  </body>
+</html>
