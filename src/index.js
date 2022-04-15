@@ -10,18 +10,18 @@ import Login from './components/Login';
 const root=ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
+  <Home/>
+  // <Router>
+  //     <Routes>
+  //       <Route path="/" element={<Layout />}>
+  //         <Route index element={<Home />} />
+  //         <Route path="/login" element={<Login />} />
+  //         <Route path="/registration" element={<Registration />} />
+  //         <Route path="*" element={<NoPage />} />
+  //       </Route>
+  //     </Routes>
+  //   </Router>
 
-  <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/registration" element={<Registration />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
-    </Router>
-
-  //  <App />
+  // <App />
 );
 

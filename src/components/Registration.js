@@ -1,8 +1,8 @@
 import React from "react";
 import  handle from "../scripts/user/handle";
-import "../styles/user/box.css";
-import "../styles/user/button.css";
-import "../styles/user/form.css";
+// import "../styles/box.css";
+// import "../styles/button.css";
+// import "../styles/form.css";
 
 function Registration(){  
 
