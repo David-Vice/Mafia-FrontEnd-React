@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/user/login.css";
 import  handle from "../scripts/user/handle"
 
 function Login(){
