@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 import './login.css'
+import LoginForm from '../components/LoginForm'
 
 const Login = (props) => {
   return (
@@ -30,41 +31,7 @@ const Login = (props) => {
           src="/playground_assets/mafia__4_-removebg-preview-300w.png"
           className="login-image"
         />
-        <form name="submit" method="post" className="login-form">
-          <ul className="login-ul list">
-            <li className="list-item">
-              <label className="login-text">Username</label>
-            </li>
-            <li className="list-item">
-              <input
-                type="text"
-                placeholder="Username"
-                className="login-textinput input"
-              />
-            </li>
-            <li className="list-item">
-              <label className="login-label">
-                <span>Password</span>
-              </label>
-            </li>
-            <li className="list-item">
-              <input
-                type="password"
-                placeholder="Password"
-                className="login-textinput1 input"
-              />
-            </li>
-            <li className="login-li2 list-item">
-              <span className="login-text2">Forgot Password?</span>
-            </li>
-            <li className="login-li3 list-item"></li>
-          </ul>
-          <input
-            type="submit"
-            value="Login"
-            className="login-textinput2 input"
-          />
-        </form>
+        <LoginForm></LoginForm>
         <div className="login-container1">
           <span className="login-text3">
             Don&apos;t have an account?

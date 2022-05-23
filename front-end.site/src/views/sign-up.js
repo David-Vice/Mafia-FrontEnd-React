@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 import './sign-up.css'
+import RegisterForm from '../components/RegisterForm'
 
 const SignUp = (props) => {
   return (
@@ -35,40 +36,8 @@ const SignUp = (props) => {
             />
           </div>
           <div className="sign-up-container05">
-            <form name="submit" method="post" className="sign-up-form">
-              <ul className="sign-up-ul list">
-                <li className="list-item">
-                  <label className="sign-up-label">
-                    <span>Username</span>
-                  </label>
-                </li>
-                <li className="list-item">
-                  <input
-                    type="text"
-                    placeholder="Username"
-                    className="sign-up-textinput input"
-                  />
-                </li>
-                <li className="list-item">
-                  <label className="sign-up-text1">Password</label>
-                </li>
-                <li className="list-item">
-                  <input
-                    type="password"
-                    placeholder="Password"
-                    className="sign-up-textinput1 input"
-                  />
-                </li>
-                <li className="sign-up-li2 list-item"></li>
-                <li className="sign-up-li3 list-item"></li>
-              </ul>
-              <input
-                type="submit"
-                value="Sign Up"
-                className="sign-up-textinput2 input"
-              />
-            </form>
-            <div className="sign-up-container06">
+           <RegisterForm></RegisterForm>
+            <div className="sign-up-container06" style={{marginTop:   '100px'}}  >
               <span className="sign-up-text2">
                 Already have an account?
                 <span
@@ -81,7 +50,7 @@ const SignUp = (props) => {
                 Log in
               </Link>
             </div>
-            <div className="sign-up-container07">
+            <div className="sign-up-container07" style={{marginTop:  '100px'}} >
               <div className="sign-up-container08">
                 <img
                   alt="image"
