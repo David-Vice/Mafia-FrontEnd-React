@@ -1,27 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-//import App from './App';
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import Layout from "./components/Layout";
-import Home from "./components/Home";
-import NoPage from "./components/NoPage";
-import Registration from './components/Registration';
-import Login from './components/Login';
-const root=ReactDOM.createRoot(document.getElementById('root'));
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-root.render(
-  <Home/>
-  // <Router>
-  //     <Routes>
-  //       <Route path="/" element={<Layout />}>
-  //         <Route index element={<Home />} />
-  //         <Route path="/login" element={<Login />} />
-  //         <Route path="/registration" element={<Registration />} />
-  //         <Route path="*" element={<NoPage />} />
-  //       </Route>
-  //     </Routes>
-  //   </Router>
+import './style.css'
+import Login from './views/login'
+import Profile from './views/profile'
+import Home from './views/home'
+import Page from './views/page'
+import SignUp from './views/sign-up'
 
-  // <App />
-);
+const App = () => {
+  return (
+    <Router>
+      <div>
+        <Route exact component={Login} path="/login" />
+        <Route exact component={Profile} path="/profile" />
+        <Route exact component={Home} path="/" />
+        <Route exact component={Page} path="/page" />
+        <Route exact component={SignUp} path="/sign-up" />
+      </div>
+    </Router>
+  )
+}
 
+ReactDOM.render(<App />, document.getElementById('app'))
