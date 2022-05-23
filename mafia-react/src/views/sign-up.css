@@ -6,8 +6,9 @@
   align-items: center;
   flex-direction: column;
   background-size: cover;
-  background-image: linear-gradient(0deg, rgba(189, 195, 199, 0) 1.00%,rgba(0, 0, 0, 0.69) 99.00%),url("/playground_assets/imgur-1500w.jpg");
+  background-image: linear-gradient(0deg, rgba(189, 195, 199, 0) 1.00%, rgba(0, 0, 0, 0.69) 99.00%), url("/playground_assets/imgur-1500w.jpg");
 }
+
 .sign-up-header {
   width: 100%;
   height: 113px;
@@ -20,8 +21,9 @@
   padding-right: var(--dl-space-space-threeunits);
   padding-bottom: var(--dl-space-space-twounits);
   justify-content: space-between;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0.00%,rgba(17, 17, 17, 0.84) 47.00%);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0.00%, rgba(17, 17, 17, 0.84) 47.00%);
 }
+
 .sign-up-nav {
   top: 39px;
   flex: 0 0 auto;
@@ -35,6 +37,7 @@
   flex-direction: row;
   justify-content: flex-start;
 }
+
 .sign-up-attitude {
   color: #d4d4d4;
   font-size: 20px;
@@ -44,9 +47,11 @@
   margin-left: 10px;
   margin-right: 50px;
 }
+
 .sign-up-attitude:hover {
   cursor: pointer;
 }
+
 .sign-up-rules {
   color: #d4d4d4;
   font-size: 20px;
@@ -54,9 +59,11 @@
   transition: 0.3s;
   font-family: Oxygen;
 }
+
 .sign-up-rules:hover {
   cursor: pointer;
 }
+
 .sign-up-abous-us {
   color: #d4d4d4;
   font-size: 20px;
@@ -66,9 +73,11 @@
   margin-left: 50px;
   margin-bottom: 0px;
 }
+
 .sign-up-abous-us:hover {
   cursor: pointer;
 }
+
 .sign-up-home {
   top: 34px;
   right: 48px;
@@ -78,6 +87,7 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
 .sign-up-home1 {
   font-size: 20px;
   transition: 0.3s;
@@ -86,10 +96,12 @@
   text-decoration: none;
   background-color: rgba(215, 213, 210, 0.86);
 }
+
 .sign-up-home1:hover {
   cursor: pointer;
   background-color: whitesmoke;
 }
+
 .sign-up-container01 {
   width: 100%;
   height: 569px;
@@ -98,6 +110,7 @@
   flex-direction: row;
   justify-content: flex-start;
 }
+
 .sign-up-container02 {
   flex: 0 0 auto;
   width: 15%;
@@ -106,6 +119,7 @@
   align-items: flex-start;
   flex-direction: column;
 }
+
 .sign-up-container03 {
   flex: 0 0 auto;
   width: 80%;
@@ -114,6 +128,7 @@
   align-items: flex-start;
   flex-direction: column;
 }
+
 .sign-up-container04 {
   flex: 0 0 auto;
   width: 100%;
@@ -121,6 +136,7 @@
   display: flex;
   align-items: flex-start;
 }
+
 .sign-up-image {
   width: 276px;
   height: 115px;
@@ -128,6 +144,7 @@
   object-fit: cover;
   margin-left: 90px;
 }
+
 .sign-up-container05 {
   flex: 0 0 auto;
   width: 100%;
@@ -137,6 +154,7 @@
   align-items: flex-end;
   justify-content: flex-start;
 }
+
 .sign-up-form {
   top: -56px;
   left: 8px;
@@ -145,6 +163,7 @@
   position: absolute;
   align-self: flex-start;
 }
+
 .sign-up-ul {
   top: 16px;
   left: 25px;
@@ -153,6 +172,7 @@
   position: absolute;
   padding-left: 0px;
 }
+
 .sign-up-label {
   color: #d4d4d4;
   font-size: 25px;
@@ -160,6 +180,7 @@
   line-height: 2;
   letter-spacing: 1px;
 }
+
 .sign-up-textinput {
   width: 400px;
   height: 55px;
@@ -167,10 +188,12 @@
   border-width: 0px;
   background-color: rgba(212, 212, 212, 0.89);
 }
+
 .sign-up-textinput:focus-within {
   outline: unset;
   background-color: ghostwhite;
 }
+
 .sign-up-text1 {
   color: #d4d4d4;
   font-size: 25px;
@@ -178,6 +201,7 @@
   line-height: 2;
   letter-spacing: 1px;
 }
+
 .sign-up-textinput1 {
   width: 400px;
   height: 55px;
@@ -185,18 +209,22 @@
   border-width: 0px;
   background-color: rgba(212, 212, 212, 0.89);
 }
+
 .sign-up-textinput1:focus-within {
   outline: unset;
   background-color: ghostwhite;
 }
+
 .sign-up-li2 {
   position: relative;
 }
+
 .sign-up-li3 {
   right: 0px;
   bottom: 70px;
   position: absolute;
 }
+
 .sign-up-textinput2 {
   top: 288px;
   left: 139px;
@@ -212,11 +240,13 @@
   border-radius: 10px;
   background-color: rgba(212, 212, 212, 0.89);
 }
+
 .sign-up-textinput2:hover {
   cursor: pointer;
   box-shadow: none;
   background-color: ghostwhite;
 }
+
 .sign-up-container06 {
   top: 312px;
   left: 102px;
@@ -226,18 +256,21 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .sign-up-text2 {
   color: #e8dbdb;
   font-size: 20px;
   font-family: Oxygen;
   margin-right: 10px;
 }
+
 .sign-up-navlink {
   color: #f9f4f9;
   font-size: 20px;
   font-family: Oxygen;
   text-decoration: underline;
 }
+
 .sign-up-container07 {
   top: 350px;
   flex: 0 0 auto;
@@ -250,6 +283,7 @@
   align-self: flex-end;
   align-items: flex-start;
 }
+
 .sign-up-container08 {
   flex: 0 0 auto;
   width: 33.3%;
@@ -258,11 +292,14 @@
   align-items: flex-start;
   flex-direction: column;
 }
+
 .sign-up-image1 {
   height: 100%;
   align-self: flex-end;
   object-fit: cover;
+  cursor: pointer;
 }
+
 .sign-up-container09 {
   flex: 0 0 auto;
   width: 33.3%;
@@ -271,11 +308,14 @@
   align-items: flex-start;
   flex-direction: column;
 }
+
 .sign-up-image2 {
   height: 100%;
   align-self: center;
   object-fit: cover;
+  cursor: pointer;
 }
+
 .sign-up-container10 {
   flex: 0 0 auto;
   width: 33.3%;
@@ -284,21 +324,26 @@
   align-items: flex-start;
   flex-direction: row;
 }
+
 .sign-up-image3 {
   height: 100%;
   align-self: center;
   object-fit: cover;
+  cursor: pointer;
 }
+
 @media(max-width: 991px) {
   .sign-up-image {
     margin-left: 160px;
   }
 }
+
 @media(max-width: 767px) {
   .sign-up-header {
     padding-left: var(--dl-space-space-twounits);
     padding-right: var(--dl-space-space-twounits);
   }
+
   .sign-up-nav {
     left: 0px;
     width: 346px;
@@ -307,6 +352,7 @@
     align-items: flex-start;
     justify-content: flex-start;
   }
+
   .sign-up-attitude {
     color: #d4d4d4;
     margin-top: 5px;
@@ -314,12 +360,14 @@
     margin-left: 10px;
     margin-right: 50px;
   }
+
   .sign-up-rules {
     color: #d4d4d4;
     margin-top: 5px;
     font-family: Oxygen;
     margin-right: 50px;
   }
+
   .sign-up-abous-us {
     color: #d4d4d4;
     margin-top: 5px;
@@ -327,33 +375,40 @@
     margin-left: 0px;
     margin-bottom: 0px;
   }
+
   .sign-up-container02 {
     width: 20%;
   }
+
   .sign-up-image {
     width: 50%;
     height: 129px;
     margin-left: 80px;
   }
+
   .sign-up-container05 {
     width: 547px;
     position: relative;
   }
+
   .sign-up-form {
     top: 8px;
     left: 0px;
     height: 399px;
     position: absolute;
   }
+
   .sign-up-ul {
     left: 0px;
     right: 0px;
     margin: auto;
   }
+
   .sign-up-textinput2 {
     top: 304px;
     left: 139px;
   }
+
   .sign-up-container06 {
     flex: 1;
     left: 0px;
@@ -366,10 +421,12 @@
     flex-direction: row;
     justify-content: flex-start;
   }
+
   .sign-up-text2 {
     margin-left: 0px;
   }
 }
+
 @media(max-width: 479px) {
   .sign-up-header {
     padding: var(--dl-space-space-unit);
