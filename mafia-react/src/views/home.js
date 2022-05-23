@@ -31,11 +31,11 @@ const Home = (props) => {
         <div className="home-container1"></div>
         <div className="home-container2">
           <div className="home-container3">
-            <img
+            {<img
               alt="image"
               src="/playground_assets/1-removebg-preview-500w.png"
               className="home-image"
-            />
+            />}
           </div>
           <div className="home-container4">
             <img

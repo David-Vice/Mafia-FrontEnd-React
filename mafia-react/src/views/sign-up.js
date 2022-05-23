@@ -85,21 +85,21 @@ const SignUp = (props) => {
               <div className="sign-up-container08">
                 <img
                   alt="image"
-                  src="3cafaf8e-98ee-4db2-8c24-554599872b42"
+                  src="/playground_assets/800px-google__g__logo.svg-removebg-preview-1500w.png"
                   className="sign-up-image1"
                 />
               </div>
               <div className="sign-up-container09">
                 <img
                   alt="image"
-                  src="118fb8ac-be49-4fba-9121-061ea96837b2"
+                  src="/playground_assets/1024px-facebook_logo__2019_-removebg-preview-1500w.png"
                   className="sign-up-image2"
                 />
               </div>
               <div className="sign-up-container10">
                 <img
                   alt="image"
-                  src="1183268c-8eac-4b52-a2f3-c110be157d4f"
+                  src="/playground_assets/microsoft_logo-removebg-preview-1500w.png"
                   className="sign-up-image3"
                 />
               </div>
