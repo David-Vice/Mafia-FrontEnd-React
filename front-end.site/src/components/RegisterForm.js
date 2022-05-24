@@ -23,16 +23,15 @@ export default function RegisterForm() {
             password:data.password,
             email:data.email
         })
-        .then(data=>{
-            var currentdate = new Date(); 
-            console.log(data.data);
-            document.cookie = "token="+data.data+"; expires=Thu, 25 May 2022 12:00:00 UTC; ";
+        .then(res=>{
+            var date = new Date();
+            var expiresDate = new Date(date.setDate(date.getDate() + 1));
+            var expiresDateString = expiresDate.toUTCString();
+            document.cookie =  `token=${res.data}; expires=${expiresDateString};`; 
             setConfirm(true);
         })
         .catch((error) => {
-            if (error!=null) {
-                
-            
+            if (error.response!=null) {
             setConfirm(false);
             seterrorMes( error.response.data);
             }

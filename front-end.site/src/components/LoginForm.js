@@ -26,7 +26,12 @@ export default function LoginForm() {
         })
         .then(res=>{
            // var currentdate = new Date()
-            document.cookie = "token="+res.data+"; expires=Thu, 25 May 2022 12:00:00 UTC; ";
+            // adds token to cookie
+            var date = new Date();
+            var expiresDate = new Date(date.setDate(date.getDate() + 1));
+            var expiresDateString = expiresDate.toUTCString();
+            document.cookie =  `token=${res.data}; expires=${expiresDateString};`; 
+
             setConfirm(true);
         })
         .catch((error) => {
@@ -34,11 +39,8 @@ export default function LoginForm() {
             setConfirm(false);
             seterrorMes( error.response.data);
             }
-           // alert(error.response.data)
             return;
         });
-
-        
     }
     if(confirm){
         return  <Redirect  to="/profile" />
