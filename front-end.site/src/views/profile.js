@@ -4,8 +4,11 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 import './profile.css'
+import { getCookie, parseJwt,token } from '../components/Helpers'
 
 const Profile = (props) => {
+  //const photo=  (token).Photo;  ;
+
   return (
     <div className="profile-container">
       <Helmet>
@@ -31,7 +34,7 @@ const Profile = (props) => {
           <div className="profile-container02">
             <img
               alt="image"
-              src="/playground_assets/3576937-400w.png"
+              //src={`data:image/jpeg;base64,${photo}`}
               className="profile-image1"
             />
           </div>

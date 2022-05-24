@@ -1,4 +1,4 @@
-import React, { useState , useRef } from 'react'
+import React, { useState , useRef,useEffect } from 'react'
 import Axios from 'axios' 
 import { Link, Redirect } from 'react-router-dom';
 export default function RegisterForm() {
@@ -14,8 +14,8 @@ export default function RegisterForm() {
         const newdata={...data}
         newdata[e.target.id]=e.target.value
         setData(newdata)
-        console.log(newdata)
     }
+   
     function submit(e) {
        e.preventDefault();
         Axios.post(url,{
@@ -26,12 +26,16 @@ export default function RegisterForm() {
         .then(data=>{
             var currentdate = new Date(); 
             console.log(data.data);
+            document.cookie = "token="+data.data+"; expires=Thu, 25 May 2022 12:00:00 UTC; ";
             setConfirm(true);
-            document.cookie = "token="+res.data.userName+"; expires=Thu, 25 May 2022 12:00:00 UTC; ";
         })
         .catch((error) => {
+            if (error!=null) {
+                
+            
             setConfirm(false);
             seterrorMes( error.response.data);
+            }
             return;
         });
 

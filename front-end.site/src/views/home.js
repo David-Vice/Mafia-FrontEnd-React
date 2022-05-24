@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
 import './home.css'
+import HomeNavigation from '../components/HomeNavigation'
 
 const Home = (props) => {
   return (
@@ -18,14 +19,9 @@ const Home = (props) => {
           <span className="home-rules">Rules</span>
           <span className="home-about-us">About us</span>
         </nav>
-        <div className="home-logreg">
-          <Link to="/login" className="home-login button">
-            Login
-          </Link>
-          <Link to="/sign-up" className="home-sign-up button">
-            Sign Up
-          </Link>
-        </div>
+        <HomeNavigation></HomeNavigation>
+
+        
       </header>
       <div className="home-main">
         <div className="home-container1"></div>

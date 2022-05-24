@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import Axios from 'axios' 
 import {Redirect} from 'react-router-dom';
+import { parseJwt } from './Helpers';
 export default function LoginForm() {
     const url="https://localhost:44313/api/Auth/login";
     const [confirm, setConfirm] = useState(false);
@@ -9,29 +10,30 @@ export default function LoginForm() {
         password: "",
     })
     const [errorMes, seterrorMes] = useState("");
+    
     function handle(e) {
         const newdata={...data}
         newdata[e.target.id]=e.target.value
         setData(newdata)
-        console.log(newdata)
     }
     
-    function submit(e) {
+    async function  submit(e) {
         e.preventDefault();
         
-        Axios.post(url,{
+        await Axios.post(url,{
             userName:data.userName,
             password:data.password
         })
         .then(res=>{
-            console.log("hi")
-           // var currentdate = new Date(); 
-            document.cookie = "token="+res.data.userName+"; expires=Thu, 25 May 2022 12:00:00 UTC; ";
+           // var currentdate = new Date()
+            document.cookie = "token="+res.data+"; expires=Thu, 25 May 2022 12:00:00 UTC; ";
             setConfirm(true);
         })
         .catch((error) => {
+            if(error.response!=null){
             setConfirm(false);
             seterrorMes( error.response.data);
+            }
            // alert(error.response.data)
             return;
         });

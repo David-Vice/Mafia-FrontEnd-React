@@ -5,8 +5,13 @@ import { Helmet } from 'react-helmet'
 
 import './sign-up.css'
 import RegisterForm from '../components/RegisterForm'
-
+import { Redirect } from 'react-router-dom'
+import { getCookie } from '../components/Helpers'
 const SignUp = (props) => {
+  if (getCookie("token")) {
+    return  <Redirect  to="/" />
+  }
+  else
   return (
     <div className="sign-up-container">
       <Helmet>
