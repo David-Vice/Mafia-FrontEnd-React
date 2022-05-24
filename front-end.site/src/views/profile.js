@@ -11,6 +11,7 @@ const Profile = (props) => {
   ///for setting values to profile page
   const [photo, setPhoto] = useState(null);
   var jsonData=parseJwt( getCookie("token"));
+  const [rating, setRating] = useState(jsonData.Rating);
   // console.log(jsonData);
   const getPhotourl=`https://localhost:44313/api/Users/GetProfilePhoto/${jsonData.Id}`;
   useEffect(() => {
@@ -184,7 +185,7 @@ const Profile = (props) => {
           </div>
           <div className="profile-container14">
             <h1 className="profile-text05">
-              <span>XX</span>
+              <span>{rating}</span>
             </h1>
           </div>
         </div>
