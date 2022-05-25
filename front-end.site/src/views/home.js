@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 
 import './home.css'
 import HomeNavigation from '../components/HomeNavigation'
+import PlayButton from '../components/PlayButton'
 
 const Home = (props) => {
   return (
@@ -21,7 +22,7 @@ const Home = (props) => {
         </nav>
         <HomeNavigation></HomeNavigation>
 
-        
+
       </header>
       <div className="home-main">
         <div className="home-container1"></div>
@@ -43,7 +44,11 @@ const Home = (props) => {
           <div className="home-container5">
             <button className="home-button button">
               <span className="home-text">
-                <span>Play</span>
+
+
+                <PlayButton></PlayButton>
+
+
                 <span className="home-text2"></span>
               </span>
             </button>
