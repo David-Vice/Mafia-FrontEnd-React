@@ -6,7 +6,7 @@ import axios from 'axios'
 import { useState } from "react";
 
 
-const Lobby = ({ joinRoom, sessionId }) => {
+const Lobby = ({ joinRoom }) => {
     const [jsonData]=useState(parseJwt(getCookie('token')))
     const [room, setRoom] = useState();
     
@@ -15,7 +15,8 @@ const Lobby = ({ joinRoom, sessionId }) => {
     
     console.log(listItems);
     function AddUserToRoom(roomName,id){
-        axios.put(`https://localhost:44313/api/Sessions/PlayerJoined/${id}`)
+        axios.put(`https://localhost:44313/api/Sessions/PlayerJoined/${id}?userId=${jsonData.Id}`,
+        )
         .then(res=>{
             console.log(roomName);
             console.log(jsonData.UserName);
