@@ -39,14 +39,14 @@ hr.line {
 .user-list {
     float: left;
     background-color: #313131;
-    color:white;
+    color: white;
     width: 200px;
     height: 440px;
     margin-right: 4px;
 }
 
 .message-container {
-    height: 400px;    
+    height: 400px;
     background-color: white;
     overflow: auto;
     border-radius: 5px;
@@ -64,7 +64,7 @@ hr.line {
     margin: 0px auto 0px auto;
     padding: 5px;
     font-size: 18px;
-    color:white;
+    color: white;
     border-radius: 20px;
     margin-top: 3px;
 }
