@@ -26,9 +26,32 @@
     -->
     <title>React App</title>
   </head>
-  <body style="background-color: #66d9ff;">
+  <style>
+    .back-im{
+        width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-image: linear-gradient(0deg, rgba(189, 195, 199, 0) 1.00%, rgba(0, 0, 0, 0.69) 99.00%), url("/playground_assets/imgur-1500w.jpg");
+    background-repeat: repeat;
+    background-position: top;
+    }
+    h2{
+      color: white;
+    }
+    h3{
+      color: white;
+    }
+    .container{
+      margin: 0;
+    }
+  </style>
+  <body class="back-im">
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root" class="container-fluid" ></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
