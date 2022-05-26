@@ -21,6 +21,12 @@ const Chat = ({ sendMessage, messages, users,userRoles,bot, sessionId, closeConn
 
     const [roleDescription, setRoleDescription] = useState(null);
     const [rolePhoto, setRolePhoto] = useState(null);
+    useEffect(() => {
+        window.addEventListener('beforeunload', () =>{
+            endUserConnection();
+        })
+    }
+    , []);
     function endUserConnection() {
         
         axios.put(`https://localhost:44313/api/Sessions/PlayerLeft/${sessionId}`)
@@ -60,7 +66,7 @@ const Chat = ({ sendMessage, messages, users,userRoles,bot, sessionId, closeConn
     if (userRoles) {
         var roleId=null;
         for (let index = 0; index < userRoles.length; index++) {
-                   if (userRoles[index].userId==jsonData.Id) {
+                   if (userRoles[index].userId ==jsonData.Id) {
                        roleId=userRoles[index].roleId;
                    }
                 } 
@@ -108,7 +114,7 @@ const Chat = ({ sendMessage, messages, users,userRoles,bot, sessionId, closeConn
 
                         </div>
                     </div>
-                    <ConnectedUsers users={users} />
+                    <ConnectedUsers users={users} userId={jsonData.Id} sessionId = {sessionId} />
                     <div className='chat mx-5'>
                         <MessageContainer messages={messages} />
                         <SendMessageForm sendMessage={sendMessage} />
