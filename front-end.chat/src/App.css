@@ -45,6 +45,15 @@ hr.line {
     margin-right: 4px;
 }
 
+.user{
+    color: red;
+    background-color: rgb(179, 179, 179);
+    border: black 1px solid;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 10px;
+}
+
 .message-container {
     height: 400px;
     background-color: white;
@@ -85,4 +94,20 @@ hr.line {
 }
 .invisible-img{
     visibility: hidden;
+}
+.referee-user
+{
+    background-color: orange;
+}
+.sheriff-user
+{
+    background-color: blue;
+}
+.mafia-user
+{
+    background-color: red;
+}
+.citizen-user
+{
+    background-color: green;
 }
