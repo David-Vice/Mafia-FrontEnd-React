@@ -46,6 +46,9 @@ const Profile = (props) => {
   
     reader.onloadend = function() {
       let res=reader.result.replace("data:image/png;base64,", "");
+      res=res.replace("data:image/jpeg;base64,", "");
+      res=res.replace("data:image/jpg;base64,", "");
+      
       console.log('RESULT', reader.result)
       setPhoto(res)
     }

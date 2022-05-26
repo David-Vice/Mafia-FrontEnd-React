@@ -21,6 +21,13 @@ const Chat = ({ sendMessage, messages, users,userRoles,bot, sessionId, closeConn
 
     const [roleDescription, setRoleDescription] = useState(null);
     const [rolePhoto, setRolePhoto] = useState(null);
+
+    useEffect(() => {
+        window.addEventListener('beforeunload', () =>{
+            endUserConnection();
+        })
+    }
+    , []);
     function endUserConnection() {
         
         axios.put(`https://localhost:44313/api/Sessions/PlayerLeft/${sessionId}`)
