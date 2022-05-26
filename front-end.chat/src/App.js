@@ -10,8 +10,8 @@ const App = () => {
   const [connection, setConnection] = useState();
   const [messages, setMessages] = useState([]);
   const [users, setUsers] = useState([]);
-  const [sessionId,setSessionId]=useState(null);
-  const joinRoom = async (user, room,id) => {
+  const [sessionId, setSessionId] = useState(null);
+  const joinRoom = async (user, room, id) => {
     try {
       const connection = new HubConnectionBuilder()
         .withUrl("https://localhost:44364/chat")
@@ -38,6 +38,16 @@ const App = () => {
       console.log(e);
     }
   }
+  ////////////////////////////////////////////
+  const informRoleDistribution = async () => {
+    try {
+      console.log(sessionId);
+      await connection.invoke("InformRoleDistribution", sessionId);
+    } catch (e) {
+      console.log(e);
+    }
+  }
+  ////////////////////////////////////////////
 
   const sendMessage = async (message) => {
     try {
@@ -56,34 +66,35 @@ const App = () => {
   }
   function redirectToMain() {
     closeConnection();
-    window.location.href="http://localhost:3000/";
+    window.location.href = "http://localhost:3000/";
   }
   return <div className='app container-fluid'>
     <div className='row w-100'>
 
-      <div className='col-2 me-5'>
+      <div className='col-12'>
         <a onClick={redirectToMain}>
-          <img 
-          alt="image"
-          src="/playground_assets/1-removebg-preview-200h.png"
-          className="profile-image"
+          <img
+            alt="image"
+            src="/playground_assets/1-removebg-preview-200h.png"
+            className="profile-image"
           />
-          </a>
+        </a>
       </div>
 
-      <div className='col-8'>
+      {/* <div className='col-8'>
         <h2>MafiaChat</h2>
-    <hr className='line' />
-
-      </div>
+        <hr className='line' />
+      </div> */}
       <div className='col-2'>
-        
+
       </div>
     </div>
 
     {!connection
       ? <Lobby joinRoom={joinRoom} />
-      : <Chat sendMessage={sendMessage} messages={messages} users={users} sessionId={sessionId} closeConnection={closeConnection} />}
+      // : <Chat sendMessage={sendMessage} messages={messages} users={users} sessionId={sessionId} closeConnection={closeConnection} />}
+      : <Chat sendMessage={sendMessage} messages={messages} users={users}
+        sessionId={sessionId} closeConnection={closeConnection} informRoleDistribution={informRoleDistribution} />}
   </div>
 }
 
