@@ -30,7 +30,7 @@ const Chat = ({ sendMessage, messages, users,userRoles,bot, sessionId, closeConn
     , []);
     function endUserConnection() {
         
-        axios.put(`https://localhost:44313/api/Sessions/PlayerLeft/${sessionId}`)
+        axios.put(`https://bsite.net/Kanan02/api/Sessions/PlayerLeft/${sessionId}`)
             .then(res => {
                 closeConnection()
                 setRoleName(null);
@@ -50,7 +50,7 @@ const Chat = ({ sendMessage, messages, users,userRoles,bot, sessionId, closeConn
     }, []);
     
     function showButton() {
-        axios.get(`https://localhost:44313/api/Sessions/GetAdmin/${sessionId}`)
+        axios.get(`https://bsite.net/Kanan02/api/Sessions/GetAdmin/${sessionId}`)
         .then(res => {
             
                 if (res.data == jsonData.Id) {
@@ -74,7 +74,7 @@ const Chat = ({ sendMessage, messages, users,userRoles,bot, sessionId, closeConn
        if(roleId!=null){
             if (roleId!=3) {
                 flagRoleHide=false;
-                axios.get(`https://localhost:44313/api/Roles/${roleId}`)
+                axios.get(`https://bsite.net/Kanan02/api/Roles/${roleId}`)
                 .then(res => {
                     
                     setRoleName(res.data.role1)
@@ -91,7 +91,7 @@ const Chat = ({ sendMessage, messages, users,userRoles,bot, sessionId, closeConn
         'invisible-img': flagRoleHide,
     })
     function startGame() {
-        axios.put(`https://localhost:44313/api/GameSessionsUsersRoles/DistributeRoles?sessionId=${sessionId}`)
+        axios.put(`https://bsite.net/Kanan02/api/GameSessionsUsersRoles/DistributeRoles?sessionId=${sessionId}`)
             .then(res => {
                 seterrorMes(res.data);
                 informRoleDistribution();

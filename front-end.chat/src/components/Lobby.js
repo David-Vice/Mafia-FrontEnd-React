@@ -10,12 +10,12 @@ const Lobby = ({ joinRoom }) => {
     const [jsonData] = useState(parseJwt(getCookie('token')))
     const [room, setRoom] = useState();
 
-    const [url] = useState("https://localhost:44313/api/Sessions");
+    const [url] = useState("https://bsite.net/Kanan02/api/Sessions");
     const [listItems, setListItems] = useState(null);
 
     console.log(listItems);
     function AddUserToRoom(roomName, id) {
-        axios.put(`https://localhost:44313/api/Sessions/PlayerJoined/${id}?userId=${jsonData.Id}`,
+        axios.put(`https://bsite.net/Kanan02/api/Sessions/PlayerJoined/${id}?userId=${jsonData.Id}`,
         )
             .then(res => {
                 console.log(roomName);

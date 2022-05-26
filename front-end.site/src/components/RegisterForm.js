@@ -2,7 +2,7 @@ import React, { useState , useRef,useEffect } from 'react'
 import Axios from 'axios' 
 import { Link, Redirect } from 'react-router-dom';
 export default function RegisterForm() {
-    const url="https://localhost:44313/api/Auth/register";
+    const url="http://kanan02-001-site1.itempurl.com/api/Auth/register";
     const [confirm, setConfirm] = useState(false);
     const [errorMes, seterrorMes] = useState("");
     const [data,setData]=useState({

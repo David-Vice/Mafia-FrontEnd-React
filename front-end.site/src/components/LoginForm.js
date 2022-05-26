@@ -3,7 +3,7 @@ import Axios from 'axios'
 import {Redirect} from 'react-router-dom';
 import { parseJwt } from './Helpers';
 export default function LoginForm() {
-    const url="https://localhost:44313/api/Auth/login";
+    const url="http://kanan02-001-site1.itempurl.com/api/Auth/login";
     const [confirm, setConfirm] = useState(false);
     const [data,setData]=useState({
         userName: "",

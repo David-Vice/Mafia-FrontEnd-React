@@ -13,7 +13,7 @@ const Profile = (props) => {
   var jsonData=parseJwt( getCookie("token"));
   const [rating, setRating] = useState(jsonData.Rating);
   // console.log(jsonData);
-  const getPhotourl=`https://localhost:44313/api/Users/GetProfilePhoto/${jsonData.Id}`;
+  const getPhotourl=`http://kanan02-001-site1.itempurl.com/api/Users/GetProfilePhoto/${jsonData.Id}`;
   useEffect(() => {
      axios.get(getPhotourl).then((response) => {
       setPhoto(response.data)
@@ -23,7 +23,7 @@ const Profile = (props) => {
   
   const listItems = Array.from(sessions).map((d) => <li key={d.sessionName} className='profile-list-item list-item'> {d.sessionName} {d.startTime}   {d.endTime}</li>);
 
-  const urlForPut=`https://localhost:44313/api/Auth/${jsonData.Id}`;
+  const urlForPut=`http://kanan02-001-site1.itempurl.com/api/Auth/${jsonData.Id}`;
   const [confirm, setConfirm] = useState(false);
   const [data,setData]=useState({
       userName: jsonData.UserName,

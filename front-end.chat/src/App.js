@@ -16,7 +16,7 @@ const App = () => {
   const joinRoom = async (user, room, id) => {
     try {
       const connection = new HubConnectionBuilder()
-        .withUrl("https://localhost:44364/chat")
+        .withUrl("https://bsite.net/MafiaAZ/chat")
         .configureLogging(LogLevel.Information)
         .build();
 
@@ -84,7 +84,7 @@ const App = () => {
   }
   function redirectToMain() {
     closeConnection();
-    window.location.href = "http://localhost:3000/";
+    window.location.href = "https://kenan812.github.io/";
   }
   return <div className='app container-fluid'>
     <div className='row w-100'>
