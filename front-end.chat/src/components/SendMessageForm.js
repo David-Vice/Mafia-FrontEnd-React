@@ -1,7 +1,7 @@
 import { Form, Button, FormControl, InputGroup } from 'react-bootstrap';
 import { useState } from 'react';
 
-const SendMessageForm = ({ sendMessage }) => {
+const SendMessageForm = ({ sendMessage,sendUserRoles }) => {
     const [message, setMessage] = useState('');
 
     return <Form

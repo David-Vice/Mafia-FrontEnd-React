@@ -74,10 +74,15 @@ hr.line {
     margin-bottom: 3px;
     margin-right: 5px;
 }
-
+.roledisc{
+    color: white;
+}
 .admin-button{
     visibility: visible;
 }
 .user-button{
+    visibility: hidden;
+}
+.invisible-img{
     visibility: hidden;
 }

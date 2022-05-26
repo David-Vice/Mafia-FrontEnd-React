@@ -9,6 +9,8 @@ import { Button } from 'react-bootstrap';
 const App = () => {
   const [connection, setConnection] = useState();
   const [messages, setMessages] = useState([]);
+  const [userRoles, setUserRoles] = useState([]);
+  const [bot, setBot] = useState();
   const [users, setUsers] = useState([]);
   const [sessionId, setSessionId] = useState(null);
   const joinRoom = async (user, room, id) => {
@@ -21,7 +23,10 @@ const App = () => {
       connection.on("ReceiveMessage", (user, message) => {
         setMessages(messages => [...messages, { user, message }]);
       });
-
+      connection.on("ReceiveUsersRoles", (bot, userRoles) => {
+        setUserRoles( userRoles );
+        setBot(bot)
+      });
       connection.on("UsersInRoom", (users) => {
         setUsers(users);
       });
@@ -39,10 +44,23 @@ const App = () => {
     }
   }
   ////////////////////////////////////////////
+
+  // const ReceiveUsersRoles = async (bot,userRoles)=>{
+  //   try{
+  //     setUserRoles( userRoles );
+  //     setBot(bot);
+  //   }catch (e) {
+  //     console.log(e);
+  //   }
+  // }
+
   const informRoleDistribution = async () => {
     try {
       console.log(sessionId);
       await connection.invoke("InformRoleDistribution", sessionId);
+      
+
+      
     } catch (e) {
       console.log(e);
     }
@@ -56,9 +74,9 @@ const App = () => {
       console.log(e);
     }
   }
-
   const closeConnection = async () => {
     try {
+      setUserRoles([]);
       await connection.stop();
     } catch (e) {
       console.log(e);
@@ -93,7 +111,7 @@ const App = () => {
     {!connection
       ? <Lobby joinRoom={joinRoom} />
       // : <Chat sendMessage={sendMessage} messages={messages} users={users} sessionId={sessionId} closeConnection={closeConnection} />}
-      : <Chat sendMessage={sendMessage} messages={messages} users={users}
+      : <Chat sendMessage={sendMessage} messages={messages} users={users} userRoles={userRoles} bot={bot}
         sessionId={sessionId} closeConnection={closeConnection} informRoleDistribution={informRoleDistribution} />}
   </div>
 }
